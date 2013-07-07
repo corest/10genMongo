@@ -67,9 +67,9 @@ class BlogPostDAO:
     def get_posts(self, num_posts):
 
         query = {}
-        sort = [('date', pymongo.ASCENDING)]
+        sort = [("date", -1)]
 
-        cursor = self.posts.find(query).sort().limit(num_posts)    # Placeholder so blog compiles before you make your changes
+        cursor = self.posts.find(query).sort(sort).limit(num_posts)   # Placeholder so blog compiles before you make your changes
 
         # XXX HW 3.2 Work here to get the posts
 
